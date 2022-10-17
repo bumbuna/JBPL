@@ -1,0 +1,31 @@
+{
+    "name": "Maple",
+    "files": [
+    {
+        "git": 1
+    }
+    ],
+    "build": {
+        "directory": "build",
+        "build": {
+            "targets": [
+            {
+                "name": "cmake configure",
+                "build_cmd": "cmake -S .. -B build"
+            },
+            {
+                "name": "cmake build Debug",
+                "build_cmd": "cmake -DCMAKE_BUILD_TYPE:STRING=\"Debug\" --build ."
+            },
+            {
+                "name": "cmake build Release",
+                "build_cmd": "cmake -DCMAKE_BUILD_TYPE:STRING=\"Release\" --build ."
+            },
+            {
+                "name": "cmake install",
+                "build_cmd": "cmake --install ."
+            }
+            ]
+        }
+    }
+}
